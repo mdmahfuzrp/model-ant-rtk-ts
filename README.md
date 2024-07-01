@@ -6,7 +6,7 @@ Product Management System is a web application built using React, Redux, RTK Que
 
 ### Live Demo [Live Demo](https://m360ict-ts.netlify.app/)
 
-### Backend Repo [Repository Link](https://m360ict-ts.netlify.app/)
+### Repository Link [Repository Link](https://github.com/mdmahfuzrp/model-ant-rtk-ts)
 
 ## Screenshots
 
