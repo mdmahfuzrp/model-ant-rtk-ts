@@ -24,7 +24,7 @@ export const productsApi = createApi({
     }),
     getProduct: builder.query<ProductForApi, number>({
       query: (id) => `products/${id}`,
-      providesTags: (result, error, id) => [{ type: "Product", id }],
+      providesTags: (_, __, id) => [{ type: "Product", id }],
     }),
     getCategories: builder.query<ProductCategory[], void>({
       query: () => "products/categories",
@@ -38,7 +38,7 @@ export const productsApi = createApi({
         method: "PATCH",
         body: data,
       }),
-      invalidatesTags: (result, error, { id }) => [{ type: "Product", id }],
+      invalidatesTags: (_, __, { id }) => [{ type: "Product", id }],
     }),
   }),
 });
