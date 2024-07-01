@@ -50,19 +50,19 @@ const EditProduct: React.FC = () => {
       layout="vertical"
       style={formStyle}
     >
-      <Form.Item name="title" label="Title">
+      <Form.Item style={itemStyle} name="title" label="Title">
         <Input />
       </Form.Item>
-      <Form.Item name="description" label="Description">
+      <Form.Item style={itemStyle} name="description" label="Description">
         <Input.TextArea />
       </Form.Item>
-      <Form.Item name="price" label="Price">
+      <Form.Item style={itemStyle} name="price" label="Price">
         <Input type="number" />
       </Form.Item>
-      <Form.Item name="stock" label="Stock">
+      <Form.Item style={itemStyle} name="stock" label="Stock">
         <Input type="number" />
       </Form.Item>
-      <Form.Item name="brand" label="Brand">
+      <Form.Item style={itemStyle} name="brand" label="Brand">
         <Input />
       </Form.Item>
       <Form.Item name="category" label="Category">
@@ -131,11 +131,16 @@ const formStyle = {
   backgroundColor: "#fff",
   borderRadius: "8px",
   boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+  fontFamily: '"Poppins", sans-serif',
 };
 
 const spaceStyle = {
   display: "flex",
-  marginBottom: 8,
+  marginBottom: "0px",
+};
+
+const itemStyle = {
+  marginBottom: "10px",
 };
 
 export default EditProduct;
