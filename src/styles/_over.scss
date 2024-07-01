@@ -1,0 +1,15 @@
+:where(.css-dev-only-do-not-override-f7vrd6).ant-table-wrapper .ant-table{
+    font-family: "Poppins", sans-serif !important;
+  }
+  :where(.css-dev-only-do-not-override-f7vrd6).ant-table-wrapper .ant-table-pagination.ant-pagination{
+    padding: 10px 35px;
+    background-color: rgba(0,115,255,0.1);
+    margin: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 600;
+  }
+  :where(.css-dev-only-do-not-override-f7vrd6).ant-table-wrapper .ant-table-thead>tr>th{
+    padding: 10px 16px;
+    background-color: rgba(0,115,255,0.1);
+  }

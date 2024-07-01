@@ -1,10 +1,13 @@
+import AdminSidebar from "../components/AdminSidebar";
 import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
+import ProductList from "../components/ProductList";
 const Products = () => {
   return (
     <div className="admin-container">
-      <main className="" style={{ paddingRight: "50px" }}>
-        Hello
+      <AdminSidebar />
+      <main className="">
+        <ProductList />
       </main>
       <Link to="/admin/product/new" className="create-product-btn">
         <FaPlus />
