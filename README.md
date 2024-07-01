@@ -10,8 +10,7 @@ Product Management System is a web application built using React, Redux, RTK Que
 
 ## Screenshots
 
-![Home Page](https://i.ibb.co/f0QCYHy/Screenshot-from-2024-05-02-09-26-36.png)
-![Dashboard](https://i.ibb.co/pZwWxtv/Screenshot-from-2024-05-02-09-25-53.png)
+![Home Page](https://i.ibb.co/9V5Hbcq/Screenshot-2024-07-02-011039.png)
 
 ## Features
 
