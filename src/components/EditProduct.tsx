@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Form, Input, Button, Select, Space, message } from "antd";
+import { Form, Input, Button, Select, Space, message, Spin, Alert } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import {
   useGetCategoriesQuery,
@@ -40,8 +40,33 @@ const EditProduct: React.FC = () => {
     }
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading product</div>;
+  if (isLoading) {
+    return (
+      <Spin style={{ height: "100%" }}>
+        <Alert
+          message="Wait to see your product details"
+          description="You will find your single product details after this loading here."
+          type="info"
+          style={{
+            height: "400px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        />
+      </Spin>
+    );
+  }
+  if (error) {
+    return (
+      <Alert
+        message="We have some problem to load your data."
+        description="Maybe this is a server issue, try again after sometime - We hope it will be fine after sometime."
+        type="error"
+      />
+    );
+  }
 
   return (
     <Form
