@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import { IconType } from "react-icons";
-import { AiFillFileText } from "react-icons/ai";
-import {
-  FaChartBar,
-  FaChartLine,
-  FaChartPie,
-  FaGamepad,
-  FaStopwatch,
-} from "react-icons/fa";
+import { FaGithub, FaUser, FaLinkedin } from "react-icons/fa";
+
 import { HiMenuAlt4 } from "react-icons/hi";
-import { IoIosPeople } from "react-icons/io";
 import {
-  RiCoupon3Fill,
   RiDashboardFill,
   RiShoppingBag3Fill,
+  RiLogoutCircleLine,
 } from "react-icons/ri";
 import { Link, Location, useLocation } from "react-router-dom";
 
@@ -61,14 +54,8 @@ const AdminSidebar = () => {
       >
         <h2>Logo.</h2>
         <DivOne location={location} />
-        <DivTwo location={location} />
         <DivThree location={location} />
-
-        {phoneActive && (
-          <button id="close-sidebar" onClick={() => setShowModal(false)}>
-            Close
-          </button>
-        )}
+        <DivFour location={location} />
       </aside>
     </>
   );
@@ -90,70 +77,41 @@ const DivOne = ({ location }: { location: Location }) => (
         Icon={RiShoppingBag3Fill}
         location={location}
       />
-      <Li
-        url="/admin/customer"
-        text="Customer"
-        Icon={IoIosPeople}
-        location={location}
-      />
-      <Li
-        url="/admin/transaction"
-        text="Transaction"
-        Icon={AiFillFileText}
-        location={location}
-      />
-    </ul>
-  </div>
-);
-
-const DivTwo = ({ location }: { location: Location }) => (
-  <div>
-    <h5>Charts</h5>
-    <ul>
-      <Li
-        url="/admin/chart/bar"
-        text="Bar"
-        Icon={FaChartBar}
-        location={location}
-      />
-      <Li
-        url="/admin/chart/pie"
-        text="Pie"
-        Icon={FaChartPie}
-        location={location}
-      />
-      <Li
-        url="/admin/chart/line"
-        text="Line"
-        Icon={FaChartLine}
-        location={location}
-      />
     </ul>
   </div>
 );
 
 const DivThree = ({ location }: { location: Location }) => (
   <div>
-    <h5>Apps</h5>
+    <h5>About me</h5>
     <ul>
       <Li
-        url="/admin/app/stopwatch"
-        text="Stopwatch"
-        Icon={FaStopwatch}
+        url="https://mdmahfuzrp.netlify.app"
+        text="Portfolio"
+        Icon={FaUser}
         location={location}
       />
       <Li
-        url="/admin/app/coupon"
-        text="Coupon"
-        Icon={RiCoupon3Fill}
+        url="https://github.com/mdmahfuzrp"
+        text="Github"
+        Icon={FaGithub}
         location={location}
       />
       <Li
-        url="/admin/app/toss"
-        text="Toss"
-        Icon={FaGamepad}
+        url="https://www.linkedin.com/in/mdmahfuzrp"
+        text="LinkedIn"
+        Icon={FaLinkedin}
         location={location}
       />
+    </ul>
+  </div>
+);
+
+const DivFour = ({ location }: { location: Location }) => (
+  <div>
+    <h5>Others</h5>
+    <ul>
+      <Li url="/" text="Logout" Icon={RiLogoutCircleLine} location={location} />
     </ul>
   </div>
 );
@@ -169,13 +127,19 @@ const Li = ({ url, text, location, Icon }: LiProps) => (
     style={{
       backgroundColor: location.pathname.includes(url)
         ? "rgba(0,115,255,.8)"
+        : location.pathname === "/" && text === "Product"
+        ? "rgba(0,115,255,.8)"
         : "white",
     }}
   >
     <Link
       to={url}
       style={{
-        color: location.pathname.includes(url) ? "white" : "black",
+        color: location.pathname.includes(url)
+          ? "white"
+          : location.pathname === "/" && text === "Product"
+          ? "white"
+          : "black",
       }}
     >
       <Icon />

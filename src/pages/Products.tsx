@@ -1,6 +1,6 @@
 import AdminSidebar from "../components/AdminSidebar";
 import { Link } from "react-router-dom";
-import { FaPlus } from "react-icons/fa";
+import { TbListDetails } from "react-icons/tb";
 import ProductList from "../components/ProductList";
 const Products = () => {
   return (
@@ -9,8 +9,8 @@ const Products = () => {
       <main className="">
         <ProductList />
       </main>
-      <Link to="/admin/product/new" className="create-product-btn">
-        <FaPlus />
+      <Link to="/admin/dashboard" className="create-product-btn">
+        <TbListDetails />
       </Link>
     </div>
   );
