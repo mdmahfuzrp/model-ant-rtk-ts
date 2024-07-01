@@ -7,7 +7,7 @@
 
 .create-product-btn {
   position: absolute;
-  right: 20px;
+  right: 50px;
   top: 10px;
   @include square(2.5rem);
   @include flex(row, center, center, 0);

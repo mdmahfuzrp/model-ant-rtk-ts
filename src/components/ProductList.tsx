@@ -9,7 +9,7 @@ import { FiEdit } from "react-icons/fi";
 
 const ProductList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
+  const [pageSize, setPageSize] = useState(6);
   const navigate = useNavigate();
   const { data, isLoading } = useGetProductsQuery({
     limit: pageSize,
@@ -100,7 +100,7 @@ const tableStyle = {
   backgroundColor: "#fff",
   borderRadius: "8px",
   padding: "0px",
-  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+  boxShadow: "0 2px 5px rgba(97, 97, 97, 0.15)",
   maxWidth: "100%",
   fontFamily: '"Poppins", sans-serif',
 };
